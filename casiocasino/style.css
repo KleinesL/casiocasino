@@ -1,0 +1,12 @@
+body{
+    background-color:#2A2B33;
+    color: white;
+}
+.header{
+    color: white;
+    font-style: normal;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    background-color: #220CE8;
+}
