@@ -4,9 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="loginstyle.css">
     <title>Document</title>
+    <script>
+        const loginForm = document.getElementById("loginform");
+        const loginButton = document.getElementById("submit");
+        //const loginErrorMsg = document.getElementById("submit");
+
+        loginButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        const username = loginForm.username.value;
+        const password = loginForm.password.value;
+        alert("login");
+        if (username === "user" && password === "web_dev") {
+            alert("You have successfully logged in.");
+            location.reload();
+        } else {
+            alert("errror");
+        }
+    })
+    </script>
 </head>
 <body>
-    
+    <div class="login">
+        <form id="loginform">
+        <input type="text" name="username" placeholder="Benutzername"/>
+        <input type="password" name="password" placeholder="Passwort"/>
+        <input class="button" type="submit" id="submit" value="Login">
+        </form>
+    </div>
 </body>
 </html>
