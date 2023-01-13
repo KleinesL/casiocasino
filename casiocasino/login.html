@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="login">
-        <p id="output">wwewerwe</p>
+        <p id="output"></p>
         <form id="loginform">
         <input type="text" name="username" placeholder="Benutzername"/>
         <input type="password" name="password" placeholder="Passwort"/>
@@ -25,13 +25,13 @@
     e.preventDefault();
     const username = loginForm.username.value;
     const password = loginForm.password.value;
-    if (username === "user" && password === "web_dev") {
-        alert("You have successfully logged in.");
-
+    if (username === "user" && password === "1234") {
+        output.style.color = "green";
+        output.innerHTML = "Login erfolgreich";
         location.reload();
     } else {
-        alert("errror");
-        document.getElementById('output').innerText() = "Benutzername oder Password falsch.";
+        output.style.color = "red";
+        output.innerHTML = "Benutzername oder Password sind falsch.";
     }
 })
 </script>
