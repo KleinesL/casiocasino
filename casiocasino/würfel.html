@@ -14,8 +14,58 @@
         <a class="header" href="login.html">login</a>
         <a class="header" href="index.html">start</a>
     </div>
+    <div class="game">
+        <img id="img" class="img">
+        <button class="button" id="button">Würfeln</button>
+        <p>Sie müssen folgende Zahl würfeln:</p>
+        <p id="number"></p>
+        <p id="result"></p>
+    </div>
 
     
     
 </body>
+<script>
+    var button = document.getElementById("button");
+    var img = document.getElementById("img");
+    var number = document.getElementById("number");
+    var result = document.getElementById("result");
+    function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min) + min); 
+}
+
+    number.innerHTML = getRandomInt(1,6);
+    button.addEventListener("click", (e) => {
+    e.preventDefault();
+    var random = getRandomInt(1,6);
+    if (random == 1){
+        img.src = "img/wuerfel1.png";
+        number.innerHTML = getRandomInt(1,6);
+    } else if(random == 2){
+        img.src = "img/wuerfel2.png";
+        number.innerHTML = getRandomInt(1,6);
+    } else if(random == 3){
+        img.src = "img/wuerfel3.png";
+        number.innerHTML = getRandomInt(1,6);
+    } else if(random == 4){
+        img.src = "img/wuerfel4.png";
+        number.innerHTML = getRandomInt(1,6);
+    } else if(random == 5){
+        img.src = "img/wuerfel5.png";
+        number.innerHTML = getRandomInt(1,6);
+    } else{
+        img.src = "img/wuerfel6.png";
+        number.innerHTML = getRandomInt(1,6);
+    }
+    if(number.innerHTML == random){
+        result.style.color = "green";
+        result.innerHTML = "Sie haben gewonnen.";
+    } else {
+        result.style.color = "red";
+        result.innerHTML = "Sie haben verloren.";
+    }
+});
+</script>
 </html>
