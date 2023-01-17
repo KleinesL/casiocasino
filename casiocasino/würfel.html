@@ -27,7 +27,7 @@
         <p>Sie müssen folgende Zahl würfeln:</p>
         <p id="number"></p>
         <p id="result"></p>
-        <p id="counter"></p>
+        <p id="counter">Gewonnenes Geld: </p>
     </div>
 
 
@@ -47,7 +47,6 @@
         return Math.floor(Math.random() * (max - min) + min); 
 }
     var counter = 0;
-    counterel.innerHTML = "Gewonnene Male: ";
     number.innerHTML = getRandomInt(1,6);
     button.addEventListener("click", (e) => {
     e.preventDefault();
@@ -78,8 +77,9 @@
     } else {
         result.style.color = "red";
         result.innerHTML = "Sie haben verloren.";
+        counter = counter-2;
     }
-    counterel.innerHTML = "Gewonnene Male: "+counter;
+    counterel.innerHTML = "Gewonnenes Geld: "+counter+" €";
 });
 </script>
 </html>
