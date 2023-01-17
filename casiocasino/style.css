@@ -3,11 +3,14 @@ html{
     height: 100%;
 }
 body{
-    /*height: 98%;*/
     background-color: #1e2124;
     color: white;
-    /*display: flex;
-    justify-content: center;*/
+    
+}
+body.login{
+    height: 98%;
+    display: flex;
+    justify-content: center;
 }
 .headercontainer{
     color: white;
