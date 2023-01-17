@@ -181,3 +181,25 @@ input{
     margin-top: 2%;
     min-height: 500px;
 }
+iframe.Main{
+    width: 560;
+    height:500; 
+}
+.MainRules{
+
+    background-color:  	#7289da;
+    display: flex;    
+    
+    align-items: flex-start;
+    justify-content: center;
+    font-family: 'Dosis';
+
+    width: 98%;
+    height: 500px;
+    border:2px solid #7289da;
+    border-radius: 5px;
+    margin: 1%;
+
+
+
+}
